@@ -1,0 +1,21 @@
+<!--application.html.erbについて-->
+
+ application.html.erbは, app/views/layouts のディレクトリにある
+ layoutsのディレクトリ内には画面で共通で使うHTMLを記載する
+ ヘッダー、ナビゲーションバー、フッターなどの全画面共通部分や, CSSの読み込み, JavaScriptの読み込みなども
+ 
+<!--app/views/layouts/application.html.erbのコード-->
+
+ <head></head>の中身
+
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+ *この部分で, application.scss, application.js を読み込む
+ 
+ <body></body>の中身
+ 
+ <%= yield %>
+ 
+ このyieldというぶぶんに他のViewを差し込んで表示する
+ * yieldがなければ他のViewを表示できないので注意する
