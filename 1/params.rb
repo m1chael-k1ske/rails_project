@@ -66,3 +66,45 @@
   設定されたデータは送信先のアクションでも使用することができ、そのparamsを元にデータを作成
   
   フォームに値を入力する　=> 送信ボタンを押す => フォームの内容がparamsに値が格納される => paramsの値を元にデータを作成する
+  
+  
+  # paramsの値を確認する
+  
+    Gemfileに gem 'pry-rails' を追記 => bundle install
+    「binding.pry」を使用し、確認する
+    binding.pryはそのコード部分で処理を止めるための機能(バグやエラーの解決に能力を発揮する)
+    binding.pryはコード上にbinding.pryを記述することで、binding.pryの書かれている箇所までの処理を実行し
+    binding.pryの書かれている箇所で処理を一時的に止めることができる
+    
+    <例> class TweetsController < ApplicationController
+    
+           def index
+             @tweets = Tweet.all
+           end
+           
+           def new
+           end
+           
+           def create
+             Tweet.create(tweet_params)
+             binding.pry # <= ここに追加
+           end
+           
+           private
+           def tweet_params
+             params.permit(:name, :image, :text)
+           end
+           
+         end
+        
+  # createアクションで投稿ボタンを押し、params(params)で持ってきた値をcreateメソッドによってデータベースに保存する
+    binding.pryを記述することによって投稿ボタンを押した後の処理をbinding.pryで止めている
+    
+    binding.pryを記述したことによって投稿ボタンを押しても画面が遷移せず留まり続けます
+    ターミナルを見るとbinding.pryによってこの部分で処理を止めています、表示してくれる
+    paramsの値が知りたい場合は、paramsと入力するとparamsの値を教えてくれます
+    binding.pryは「quit」と入力することで停止状態を解除して、Railsコンソールから抜け出す
+    <!--注意-->
+    binding.pryはそのコード部分で処理を止め、確認するためのもの
+    確認が終われば削除、又はコメントアウトすること
+    
