@@ -9,6 +9,10 @@
   # 2, path(Prefix)で指定
        redirect_to root_path
        
+       # Prefixとは
+       
+         rails routes コマンドを入力して確認できる
+       
   # 3, アクションで指定
        redirect_to action: :アクション名
        同一コントローラーの指定したアクション
