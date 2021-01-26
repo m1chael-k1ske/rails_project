@@ -32,3 +32,8 @@
 　
 　rails g migration add_password_digest_to_users password_digest:string
 　# usersテーブルにpassword_digestカラムを追加, 型はstring
+　
+# 暗号化
+
+  has_secure_passwordは内部で暗号化する際にbcryptというgemを使用している
+  Gemfileに追記し, bundle install
