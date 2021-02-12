@@ -10,6 +10,5 @@
   rails db:rollback
   
   コマンドを実行し、直近で実行したMigrationファイルの読み込み前の状態に戻す
-  rails db:migrateコマンドではなく
-  rails db:rollbackを実行する
+  rails db:migrateコマンドではなく, rails db:rollbackを実行する
   その後、rails db:migrateを実行すると最新のMigrationファイルが再度読み込まれる
