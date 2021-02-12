@@ -8,4 +8,3 @@
 
   # <%= link_to 'ログインはこちら', 'root_path', class: 'text-white' %>
   #               　(テキスト)        (パス)     (class="text-white")
-                 　
