@@ -22,7 +22,7 @@
     例 redirect_to controller: :users, action: :show
  
   # 5, アクションの個別のリソースを指定
-     # usersコントローラーのshowアクションにid=1を渡す
+       usersコントローラーのshowアクションにid=1を渡す
        redirect_to controller: :users, action: :show, id: 1
      
   # 6, 前のページに戻る
