@@ -12,4 +12,4 @@
 # rails g scaffold モデル名 カラム名①:データの型① カラム名②:データの型② 
 # rails g scaffold Tweet title:string content:text
 
-# rails db:migrate を忘れないように
+# rails db:migrate
