@@ -15,4 +15,4 @@
   # update      リソースを更新させる
   # destroy     リソースを削除する
   
-# 実際「resources :コントローラー名」がどの様に定義されているかは rails route で確認
+# 「resources :コントローラー名」がどの様に定義されているかは rails route で確認
